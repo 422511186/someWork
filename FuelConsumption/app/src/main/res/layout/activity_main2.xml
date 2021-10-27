@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.InsertActivity"
+    android:background="@drawable/bimg1"
+    android:padding="30sp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30sp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/price"
+            android:layout_weight="1"
+            android:text="金额"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/priceInput"
+            android:layout_weight="3"
+            android:hint="加油的总金额 /￥"
+            android:gravity="left"
+            android:inputType="numberSigned"
+            android:layout_height="50dp"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30sp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/unitPrice"
+            android:layout_weight="1"
+            android:text="单价"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/unitPriceInput"
+            android:layout_weight="3"
+            android:hint="加油的单价 ￥/L"
+            android:gravity="left"
+            android:inputType="numberSigned"
+            android:layout_height="50dp"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30sp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/mileage"
+            android:layout_weight="1"
+            android:text="里程"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/mileageInput"
+            android:layout_weight="3"
+            android:hint="所跑的里程 Km"
+            android:gravity="left"
+            android:inputType="numberSigned"
+            android:layout_height="50dp"
+            android:layout_width="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset"
+            android:text="重置"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="20sp"/>
+
+        <Button
+            android:id="@+id/save"
+            android:text="保存"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="10sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

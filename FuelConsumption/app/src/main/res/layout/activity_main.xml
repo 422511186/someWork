@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bimg2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:textSize="20sp"
+       android:text="车辆油耗记录和分析系统" />
+
+    <ImageView
+        android:layout_width="303dp"
+        android:layout_height="99dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/kejichen02" />
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="200dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15sp"
+        android:gravity="center"
+        android:text="油耗录入和保存" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_marginTop="30sp"
+        android:layout_width="200dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="油耗记录列表显示" />
+
+
+
+</LinearLayout>
