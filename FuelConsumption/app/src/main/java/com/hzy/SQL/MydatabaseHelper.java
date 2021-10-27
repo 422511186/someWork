@@ -11,10 +11,10 @@ public class MydatabaseHelper extends SQLiteOpenHelper {
     private Context mContext;
     private static final String SQL= "create table GasUpClass ("
             + "id integer primary key autoincrement, "
-            + "price real, "
-            + "unitPrice real, "
-            + "mileage real, "
-            + "Average_fuel_consumption real, "
+            + "price text, "
+            + "unitPrice text, "
+            + "mileage text, "
+            + "Average_fuel_consumption text, "
             + "Date text)";
 
     public MydatabaseHelper(@Nullable Context context, @Nullable String name,

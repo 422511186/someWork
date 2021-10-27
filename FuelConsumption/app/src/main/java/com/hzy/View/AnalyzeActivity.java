@@ -14,6 +14,7 @@ import com.hzy.Entity.GasUpClass;
 import com.hzy.R;
 import com.hzy.SQL.MydatabaseHelper;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class AnalyzeActivity extends AppCompatActivity {
@@ -35,13 +36,24 @@ public class AnalyzeActivity extends AppCompatActivity {
             cursor.moveToFirst();
             for (int i = 0; i < cursor.getCount(); i++) {
                 int average_fuel_consumption1 = cursor.getColumnIndex("Average_fuel_consumption");
-                double average_fuel_consumption = cursor.getInt(average_fuel_consumption1);
+                String average_fuel_consumption = cursor.getString(average_fuel_consumption1);
+                double  aver = Double.parseDouble(average_fuel_consumption);
+                DecimalFormat df = new DecimalFormat("#.00");
+                String averstr = df.format(aver);
+
                 int date1 = cursor.getColumnIndex("Date");
                 String date = cursor.getString(date1);
 
                 GasUpClass gas = new GasUpClass();
-                gas.setAverage_fuel_consumption(average_fuel_consumption);
+                gas.setAverage_fuel_consumption(Double.parseDouble(averstr));
                 gas.setDate(date);
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                 list.add(gas);
                 //移动到下一位
                 cursor.moveToNext();

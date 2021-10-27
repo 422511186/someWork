@@ -14,10 +14,20 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs{
+        debug{
 
+        }
+        release{
+            storeFile file("D:\\workspace\\Android\\AS\\app\\build\\outputs\\apk\\debug\\pwd.jks")
+            storePassword  "145235.."
+            keyAlias    "key0"
+            keyPassword "145235.."
+        }
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

@@ -45,20 +45,21 @@ public class InsertActivity extends AppCompatActivity {
          */
         save.setOnClickListener(e->{
             SQLiteDatabase writableDatabase = db.getWritableDatabase();
-            Toast.makeText(InsertActivity.this,writableDatabase.toString(),Toast.LENGTH_SHORT).show();
 
-            GasUpClass gasUpClass = new GasUpClass( Double.parseDouble(priceInput.getText().toString()),
+            GasUpClass gasUpClass = new GasUpClass(
+                    Double.parseDouble(priceInput.getText().toString()),
                     Double.parseDouble(unitPriceInput.getText().toString()),
                     Double.parseDouble(mileageInput.getText().toString())
             );
+
+
             ContentValues values = new ContentValues();
-            values.put("price",gasUpClass.getPrice());
-            values.put("unitPrice",gasUpClass.getUnitPrice());
-            values.put("mileage",gasUpClass.getMileage());
-            values.put("Average_fuel_consumption",gasUpClass.getAverage_fuel_consumption());
+            values.put("price",String.valueOf(gasUpClass.getPrice()));
+            values.put("unitPrice",String.valueOf(gasUpClass.getUnitPrice()));
+            values.put("mileage",String.valueOf(gasUpClass.getMileage()));
+            values.put("Average_fuel_consumption",String.valueOf(gasUpClass.getAverage_fuel_consumption()));
             values.put("Date",gasUpClass.getDate());
             writableDatabase.insert("GasUpClass",null,values);
-            Toast.makeText(InsertActivity.this,gasUpClass.toString(),Toast.LENGTH_SHORT).show();
         });
 
 
